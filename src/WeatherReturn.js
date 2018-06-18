@@ -12,7 +12,7 @@ class WeatherReturn extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.match.params.location !== this.props.match.params.location) {
+    if (prevProps.match.params.zip !== this.props.match.params.zip) {
       this.fetchUserData()
     }
   }
@@ -26,13 +26,12 @@ class WeatherReturn extends Component {
 
   render() {
     const { location } = this.state
-    console.log(this.state.location)
     return (
       <div className="WeatherReturn">
         <h2>City: {location.name}</h2>
         {/* <ul>
             <li>Current Weather: {location.weather.main} ({location.weather.description})</li>
-            <li>Current Temp: {location.main.temp}</li>
+            <li>Current Temp: {location}</li>
             <li>Current Humidity: {location.main.humidity}%</li>
             <li>Wind Speed: {location.wind.speed}</li>
         </ul> */}
