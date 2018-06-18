@@ -4,6 +4,7 @@ import { Route, Switch, NavLink } from 'react-router-dom'
 import './App.css'
 import Github from './Github'
 import Homework from './Homework'
+import Weather from './Weather'
 
 class App extends Component {
   render() {
@@ -19,12 +20,16 @@ class App extends Component {
             <NavLink to="/github">GitHub API</NavLink>
           </li>
           <li>
+            <NavLink to="/weather">Weather API</NavLink>
+          </li>
+          <li>
             <NavLink to="/homework">Homework</NavLink>
           </li>
         </ul>
 
         <Switch>
           <Route path="/github" component={Github} />
+          <Route path="/weather" component={Weather} />
           <Route path="/homework" component={Homework} />
           <Route
             render={
